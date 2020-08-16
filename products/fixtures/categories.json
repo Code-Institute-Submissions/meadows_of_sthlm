@@ -1,0 +1,58 @@
+[
+    {
+        "pk": 1,
+        "model": "products.category",
+        "fields": {
+            "name": "earrings",
+            "friendly_name": "Earrings"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.category",
+        "fields": {
+            "name": "necklaces",
+            "friendly_name": "Necklaces"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.category",
+        "fields": {
+            "name": "rings",
+            "friendly_name": "Rings"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.category",
+        "fields": {
+            "name": "bracelets",
+            "friendly_name": "Bracelets"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.category",
+        "fields": {
+            "name": "collections",
+            "friendly_name": "Collections"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.category",
+        "fields": {
+            "name": "sale",
+            "friendly_name": "Sale"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.category",
+        "fields": {
+            "name": "other",
+            "friendly_name": "Other"
+        }
+    }
+]
