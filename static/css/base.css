@@ -5,8 +5,40 @@
          url('/static/fonts/Hoefler.ttf') format("truetype");
   }
 
+:root {
+    --banner-bg-color:#C69074;
+    --nav-bg-color: #edece9;
+  }
+
 html {
     height: 100%;
+}
+
+p {
+    font-size: small;
+}
+
+a:link {
+    color: black;
+    -webkit-transition: color .5s linear;
+    -moz-transition: color .5s linear;
+    -ms-transition: color .5s linear;
+    -o-transition: color .5s linear;
+    transition: color .5s linear;
+  }
+  
+  a:visited {
+    color: rgb(63, 63, 63);
+  }
+  
+  a:hover, a:active  {
+    color: #C69074!important;
+  }
+  
+.link-font {
+    text-transform: uppercase;
+    font-family: nobel, sans-serif;
+    font-weight: 300;
 }
 
 body {
@@ -65,6 +97,21 @@ body {
     border: 1px solid black !important;
 }
 
+.bg-black {
+    background: #000 !important;
+}
+
+#delivery-banner {
+    background-color: var(--banner-bg-color);
+}
+
+#topnav {
+    background-color: var(--nav-bg-color);
+}
+.navbar {
+    padding: 0!important;
+    background-color: var(--nav-bg-color);
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
