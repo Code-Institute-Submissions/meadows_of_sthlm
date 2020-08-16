@@ -46,14 +46,11 @@
 <body>
     <header class="container-fluid fixed-top"></header>
 
-    </head>
-
     <body>
-
-        <header class="container-fluid fixed-top">
+        <header class="container-fluid fixed-top ">
             <div id="delivery-banner" class="row text-center">
                 <div class="col text-white">
-                    <p class="my-1">Free delivery on orders over €{{ free_shipping_threshold }}!</p>
+                    <p class="my-1" id="top">Free shipping on orders over €{{ free_delivery_threshold }}!</p>
                 </div>
             </div>
 
@@ -105,7 +102,7 @@
                         </li>
                         <li class="list-inline-item">
                             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                href="">
+                                href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div> <i class="fi-xnluhl-shopping-cart"></i> </div>
                                     <p class="my-0 link-font x-sm">
@@ -144,8 +141,27 @@
         {% block content %}
         {% endblock %}
 
+
+
         {% block postloadjs %}
+
         {% endblock %}
+        <script>
+            $(document).ready(function () {
+                $("a[href='#top']").click(function () {
+                    $("html, body").animate({ scrollTop: 0 }, 700, 'swing',);
+                    return false;
+                });
+
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 200) {
+                        $('.to-top').fadeIn();
+                    } else {
+                        $('.to-top').fadeOut();
+                    }
+                });
+            });
+        </script>
     </body>
 
 </html>
