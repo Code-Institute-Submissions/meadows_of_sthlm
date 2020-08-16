@@ -1,3 +1,22 @@
-[{"pk": 1, "model": "products.product", "fields": {"sku": "pp5001340155", "name": "Chunky Gold Hoops", "description": "Gold toned chunky hoop earrings with a semi open finish. Friction backing.", "price": 53.99, "dimensions":
-"53x30 mm", "size":
-"onesize", "category": 1, "rating": 4.6, "image_url": "https://i.s-madewell.com/is/image/madewell/K0263_ED0747_ld?wid=500&hei=635&fmt=jpeg&fit=crop&qlt=75,1&resMode=bisharp&op_usm=0.5,1,5,0", "image": "hoops.jpg"}}]
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp5001340155",
+            "name": "Chunky Gold Hoops",
+            "description": "Gold toned chunky hoop earrings with a semi open finish. Friction backing.",
+            "price": 53.99,
+            "dimensions": "53x30 mm",
+            "size": "onesize",
+            "category": 1,
+            "rating": 4.6,
+            "image_url": "https://i.s-madewell.com/is/image/madewell/K0263_ED0747_ld?wid=500&hei=635&fmt=jpeg&fit=crop&qlt=75,1&resMode=bisharp&op_usm=0.5,1,5,0",
+            "image": "hoops.jpg",
+            "image_url2": "https://i.s-madewell.com/is/image/madewell/K0263_ED0747_d4?wid=1080&hei=1372&fmt=jpeg&fit=crop&qlt=75,1&resMode=bisharp&op_usm=0.5,1,5,0",
+            "image2": "hoops2.jpg",
+            "image_url3": "https://i.s-madewell.com/is/image/madewell/K0263_ED0747_d6?wid=1080&hei=1372&fmt=jpeg&fit=crop&qlt=75,1&resMode=bisharp&op_usm=0.5,1,5,0",
+            "image3": "hoops3.jpg"
+        }
+    }
+]

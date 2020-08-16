@@ -100,6 +100,16 @@ body {
 .bg-black {
     background: #000 !important;
 }
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
 /* -------------------------------- Navbar Styles */
 
 #delivery-banner {
@@ -121,6 +131,25 @@ body {
 .font-sm {
     font-size: small;
 }
+
+/* -------------------------------- Products */
+
+.star {
+    color: var(--banner-bg-color);
+}
+
+
+.top-img:hover {
+display: none;
+
+}
+
+.change-hover img {
+    display: none;
+}
+.change-hover img:first-of-type {
+    display: inherit;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -141,7 +170,7 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 130px;
     }
 
     .navbar {
@@ -151,5 +180,8 @@ body {
 @media (max-width: 992px) {
 .index-text {
     padding-top: 30vh;
+}
+.header-container {
+    padding-top: 130px;
 }
 }
