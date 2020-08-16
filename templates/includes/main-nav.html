@@ -14,22 +14,26 @@
         </li>
 
         <li class="nav-item">
-            <a class="link-font nav-link text-black mr-3 pt-0" href="#" id="earrings-link">
+            <a class="link-font nav-link text-black mr-3 pt-0" href="{% url 'products' %}?category=earrings"
+                id="earrings-link">
                 Earrings
             </a>
         </li>
         <li class="nav-item">
-            <a class="link-font nav-link text-black mr-3 pt-0" href="#" id="necklaces-link">
+            <a class="link-font nav-link text-black mr-3 pt-0" href="{% url 'products' %}?category=necklaces"
+                id="necklaces-link">
                 Necklaces
             </a>
         </li>
         <li class="nav-item">
-            <a class="link-font nav-link text-black mr-3 pt-0" href="#" id="rings-link">
+            <a class="link-font nav-link text-black mr-3 pt-0" href="{% url 'products' %}?category=rings"
+                id="rings-link">
                 Rings
             </a>
         </li>
         <li class="nav-item ">
-            <a class="link-font nav-link text-black mr-3 pt-0" href="#" id="bracelets-link">
+            <a class="link-font nav-link text-black mr-3 pt-0" href="{% url 'products' %}?category=bracelets"
+                id="bracelets-link">
                 Bracelets
             </a>
         </li>
@@ -39,7 +43,7 @@
                 Search
             </a>
             <div class="dropdown-menu border-0 p-0" aria-labelledby="Search">
-                <form method="GET" action="">
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q"
                             placeholder="Search">
