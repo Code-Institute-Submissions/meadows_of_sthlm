@@ -148,3 +148,8 @@ body {
         padding: 0!important;
     }
 }
+@media (max-width: 992px) {
+.index-text {
+    padding-top: 30vh;
+}
+}
