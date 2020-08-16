@@ -15,6 +15,10 @@ html {
 }
 
 p {
+    font-size: small;
+}
+
+.x-sm {
     font-size: x-small;
 }
 
@@ -112,6 +116,12 @@ body {
 	background: white;
 	z-index: -1;
 }
+
+.form-control:focus {
+    border-color: #C69074!important;
+    box-shadow: 0 0 0 0.2rem rgba(201, 184, 139, 0.25)!important;
+}
+
 /* -------------------------------- Navbar Styles */
 
 #delivery-banner {
@@ -146,6 +156,7 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
 
 /* -------------------------------- Media Queries */
 
