@@ -15,7 +15,7 @@ html {
 }
 
 p {
-    font-size: small;
+    font-size: x-small;
 }
 
 a:link {
@@ -114,6 +114,13 @@ body {
     background-color: var(--nav-bg-color);
 }
 
+.nav-item {
+    font-size: small;
+}
+
+.font-sm {
+    font-size: small;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
