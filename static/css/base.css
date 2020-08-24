@@ -176,6 +176,22 @@ input[type=number] {
     cursor: pointer;
 }
 
+/* ------------------------------- toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -215,23 +231,3 @@ input[type=number] {
     }
 }
 
-
-/* -------------------------------- BACK TO TOP BUTTON */
-
-.to-top{
-    z-index: 100000;
-	position:fixed;
-	bottom:40px;
-	right:40px;
-	color:#83A153;
-    font-size: 2em;
-    display: none;
-}
-
-.to-top{
-    margin-top:22px;
-    transition: all 0.5s ease 0s;
-    -moz-transition: all 0.5s ease 0s;
-    -webkit-transition: all 0.5s ease 0s;
-    -o-transition: all 0.5s ease 0s;
-}
