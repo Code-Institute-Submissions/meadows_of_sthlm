@@ -1,1 +1,1 @@
-web: gunicorn meadowsofsthlm.wsgi.application
+web: gunicorn meadowsofsthlm.wsgi:application
