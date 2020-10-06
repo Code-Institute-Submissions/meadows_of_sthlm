@@ -46,9 +46,6 @@ a:active {
 }
 
 body {
-  background: url("/media/index_bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: calc(100vh - 164px);
   color: #555;
   font-family: nobel, sans-serif;
   font-weight: 200;
@@ -323,7 +320,7 @@ input[type="number"] {
   }
 
   .header-container {
-    padding-top: 130px;
+    padding-top: 110px;
   }
 
   .navbar {
@@ -340,4 +337,17 @@ input[type="number"] {
   body {
     height: calc(100vh - 116px);
   }
+}
+
+footer {
+  height: 300px;
+}
+
+.index {
+  background: url("/media/index_bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
