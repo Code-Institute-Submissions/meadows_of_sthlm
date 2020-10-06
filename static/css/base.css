@@ -7,10 +7,20 @@
 :root {
   --banner-bg-color: #c69074;
   --nav-bg-color: #edece9;
+  --copyright-bg-color: #d3d2ce;
 }
 
 html {
   height: 100%;
+}
+
+.index {
+  background: url("/media/index_bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 p {
@@ -339,19 +349,6 @@ input[type="number"] {
   }
 }
 
-<<<<<<< HEAD
-footer {
-  height: 300px;
-}
-
-.index {
-  background: url("/media/index_bg.jpg") no-repeat center center;
-  background-size: cover;
-  height: calc(100vh - 164px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-=======
 /* Product Form */
 
 .btn-file {
@@ -377,5 +374,15 @@ footer {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
->>>>>>> 8e8b4c90a898fbf9fd843150e54ac99d011cbb93
+}
+
+/* Footer */
+
+.page-footer {
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+.footer-copyright {
+  background-color: var(--nav-bg-color);
 }
