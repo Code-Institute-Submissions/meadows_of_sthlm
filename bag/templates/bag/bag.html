@@ -85,10 +85,12 @@
                                         {% endif %}
                                     </div>
                                 </div>
+                                <button type="submit"
+                                    class="update-link text-info btn btn-link"><small>Update</small></button>
+                                <button class="remove-item text-danger float-right btn btn-link"
+                                    id="remove_{{ item.item_id }}"
+                                    data-product_size="{{ item.size }}"><small>Remove</small></button>
                             </form>
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"
-                                data-product_size="{{ item.size }}"><small>Remove</small></a>
                         </td>
                         <td class="py-3">
                             <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
