@@ -46,9 +46,6 @@ a:active {
 }
 
 body {
-  background: url("/media/index_bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: calc(100vh - 164px);
   color: #555;
   font-family: nobel, sans-serif;
   font-weight: 200;
@@ -323,7 +320,7 @@ input[type="number"] {
   }
 
   .header-container {
-    padding-top: 130px;
+    padding-top: 110px;
   }
 
   .navbar {
@@ -342,6 +339,19 @@ input[type="number"] {
   }
 }
 
+<<<<<<< HEAD
+footer {
+  height: 300px;
+}
+
+.index {
+  background: url("/media/index_bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 164px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+=======
 /* Product Form */
 
 .btn-file {
@@ -367,4 +377,5 @@ input[type="number"] {
   background-color: #dc3545;
   border-color: #dc3545;
   border-radius: 0;
+>>>>>>> 8e8b4c90a898fbf9fd843150e54ac99d011cbb93
 }
