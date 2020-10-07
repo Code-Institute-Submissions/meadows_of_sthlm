@@ -14,8 +14,6 @@ To complete this module the task was to create an issue tracking application tha
 
 The site is built with Django framework, deployed live on Heroku and uses AWS S3 to host media and static files. Locally, it uses the built-in Django Db.sqlite3 database, whereas when deployed live it uses Heroku's Postgres database. Their is full authentication functionality on-site using Django's Allauth: admin superusers can add and edit items in the Antiquities and Latest Options apps, whereas normal users can register and login, gaining access to antiquity descriptions and their order history in the Checkout and Profile apps.
 
-# Table of contents
-
 # User Experience
 
 I wanted the user experience to be as simple and clean as possible. No annoying popups, only clean product images.
@@ -59,6 +57,8 @@ I used Friconix for cart and user icons and Font Awesome for all other icons.
 
 ### Wireframes
 
+![Wireframe](https://res.cloudinary.com/www-madine-se/image/upload/v1602032395/Web_1920_2_h4llf1.png)
+
 ### Design Changes
 
 Due to time constraint I had to drop a lot of the initally planned designs and features.
@@ -94,6 +94,8 @@ Once again this page has two main sections: Default Billing Information where th
 - Pagination
 - Blog
 - Featured products
+- Social links
+- Favorites app
 
 ## Technologies Used
 
@@ -116,10 +118,10 @@ All the technologies used to create this project are listed below:
 
 ## Validators
 
-- Html
-- CSS
-- JavaScript
-- Autopep8
+- [Html](https://validator.w3.org/)
+- [CSS](https://jigsaw.w3.org/css-validator)
+- JavaScript - JSHINT extension on VSCODE
+- Autopep8 on VSCODE
 
 ## Testing
 
@@ -144,11 +146,17 @@ Devices and platforms used for testing:
   - Firefox
   - Chrome
 
+## Manual Testing
+
+I tested the site in Developer Tools mainly in Chrome and Safari. Bugs and errors were tackled successfully in this way throughout the development process by using lots of print statements.
+
 ## Bugs
 
 Most of the errors I encountered along the way were simply syntax mistakes.
 
 I ran into a bug when connecting to Postgres that took a couple of days to find. I tried manually migrating it, but ran into more and more errors. Addind `release: python manage.py migrate` to procfile solved the issue.
+
+Failed to load Friconix.js file on deployed app. Fixed the issue with CDN
 
 # Deployment
 
@@ -248,10 +256,12 @@ Readme content inspiration taken from several CI student projects. Followed CI t
 - Pexels
 - Shein
 - Google Image Search
-- Pinterest
+- [Pinterest](https://www.pinterest.com/pin/434034482838015620/?nic_v2=1a5x4ftaT)
 
 ### Acknowledgements
 
+Thanks to my mentor Maranatha Ilesanmi for supporting me through this project.
+
 ### Disclaimer
 
-This is for educational purpouse only. If there is any issue with images, please email me at sabine.mica@gmail.com for them to be promptly removed.
+This is for educational purpose only. If there is any issue with images, please email me at sabine.mica@gmail.com for them to be promptly removed.
