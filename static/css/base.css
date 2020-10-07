@@ -386,3 +386,11 @@ input[type="number"] {
 .footer-copyright {
   background-color: var(--nav-bg-color);
 }
+
+.dropdown-menu {
+  background-color: var(--nav-bg-color) !important;
+}
+
+.founder {
+  width: 80%;
+}

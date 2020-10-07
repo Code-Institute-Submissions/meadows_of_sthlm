@@ -58,16 +58,16 @@
                 <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <ul class="list-inline">
                         <li class="nav-item list-inline-item">
-                            <a class="link-font nav-link text-black" href="#" id="about-link">
+                            <a class="link-font nav-link text-black" href="{% url 'about' %}" id="about-link">
                                 About
                             </a>
                         </li>
-                        <li class="nav-item list-inline-item">
+                        <!--   <li class="nav-item list-inline-item">
                             <a class="link-font nav-link text-black" href="#" id="blog-link">
                                 Blog
                             </a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </div>
                 <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center ">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link mx-auto">
@@ -87,9 +87,11 @@
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                <a href="{% url 'add_product' %}"
+                                    class="dropdown-item link-font font-weight-light">Product Management</a>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">Profile</a>
+                                <a href="{% url 'profile' %}"
+                                    class="dropdown-item link-font font-weight-light">Profile</a>
                                 <a href="{% url 'account_logout' %}"
                                     class="dropdown-item link-font font-weight-light">Logout</a>
                                 {% else %}
@@ -157,7 +159,7 @@
 
         <!-- Footer -->
         <footer class="page-footer font-small pt-4">
-            <div class="footer-copyright text-center py-2">© 2020 Copyright: Meadows Of Sthlm</div>
+            <div class="footer-copyright text-center py-2 link-font">© 2020 Copyright: Meadows Of Sthlm</div>
         </footer>
         <!-- End Footer -->
 
