@@ -61,32 +61,96 @@ I used Friconix for cart and user icons and Font Awesome for all other icons.
 
 ### Design Changes
 
-Due to time constraint I had to drop a lot of initally planned designs and features.
+Due to time constraint I had to drop a lot of the initally planned designs and features.
 
-Features
+## Features
 
-Existing Features
+### Home App
 
-Future Features
+This the is main template for the site, which contains the Head and Footer and Navbar elements for every other page, route or view.
 
-Technologies Used
+- This Navbar is the fully responsive navigation element. It contains links to the following screens: Home, Latest Options, All Antiquities, Cart, links for Login, sign up. There is also a Cart Total icon, a Search icon. Navbar element collapses to a dropdown on smaller resolutions.
 
-Testing
+- The Footer is a basic element that contains a small Copyright text. The links in the navbar also appear here, and become a dropdown on smaller devices.
 
-Validation
+### Main Page
 
-Bugs
-Deployment
+The games opening page, containing the main logo and some information about the site, along with the Landing Page Background which is an image of the Parthenon in Athens at night. There is also a CTA button asking the user to 'Donate Now'.
 
-Local
-Remote
-Heroku
-AWS
-Credits
+### Cart App
 
-Code Used
-Images Used
-Acknowledgements
+This page has two main sections: a Shopping Cart Detail section, with image, name, quantity and value of each item; a Cart Total section with a list number of items and the total price. Quantity can be changed for each item here, and the edit and delete options for supperusers appear again.
+
+### Checkout App
+
+where the user's order is detailed once more (but without the update, edit or delete options); Checkout Information section, where the user inputs their billing info and credit card details before checking out. The credit card section is linked to and enabled by Stripe. The form needs to be fully validated before submission. As with the Cart App, the two sections appear side by side on larger resolutions, and above one another on smaller resolutions.
+
+### Profiles App
+
+Once again this page has two main sections: Default Billing Information where the billing information the user has used for previous orders appears and can be updated; the Checkout information section, where each previous order appears with its order number, date, item name x quantity, and order total information visible. The user can click through via a link on the order number to the full details of the original order in the Order History view As with the last two apps above, the two sections appear side by side on larger resolutions, and above one another on smaller resolutions.
+
+### Future Features
+
+- Pagination
+- Blog
+- Featured products
+
+## Technologies Used
+
+All the technologies used to create this project are listed below:
+
+- HTML
+- CSS
+- JavaScript
+- Python3
+- Git and Github
+- Heroku
+- AWS S3 and IAM
+- Django
+- Postgres
+- VSCODE
+- Bootstrap
+- Adobe XD
+- Adobe Photoshop
+- TinyPNG
+
+## Validators
+
+- Html
+- CSS
+- JavaScript
+- Autopep8
+
+## Testing
+
+Devices and platforms used for testing:
+
+- Iphone X
+  - Safari
+  - Chrome
+  - Brave
+- Ipad Pro 12.9" 2018
+  - Safari
+  - Chrome
+- MacBook Pro 13" MacOS Catalina
+  - Safari
+  - Chrome
+  - Firefox
+- MacBook Pro 13" Windows 10
+  - Chrome
+  - Firefox
+  - Microsoft Edge
+- OnePlus 5T
+  - Firefox
+  - Chrome
+
+## Bugs
+
+Most of the errors I encountered along the way were simply syntax mistakes.
+
+I ran into a bug when connecting to Postgres that took a couple of days to find. I tried manually migrating it, but ran into more and more errors. Addind `release: python manage.py migrate` to procfile solved the issue.
+
+# Deployment
 
 ## Run Locally
 
@@ -108,3 +172,86 @@ pip3 install -r requirements.txt
 
 python3 manage.py runserver
 ```
+
+You will need to set environment variables both locally and on Heroku Config Vars for `SECRET_KEY` etc that are found in settings.py.
+
+### Heroku
+
+To push the code to a Heroku and deploy it dynamically, follow the steps below.
+
+Procfile is a Heroku specific type of file that tells Heroku how to run our project;
+
+For the Procfile run
+
+```
+echo web: gunicorn meadowsofsthlm.wsgi:application > Procfile
+```
+
+command in the terminal;
+
+Create an App on Heroku. Log in to your previous Heroku account or set up a new one, select the New button on the top right of the screen, then select Create New App.
+
+Next, login to your Heroku account from your CLI using:
+
+```
+heroku login
+```
+
+A browser window should open up where you can click to login to your account through your local IDE. If this does not open, select the link on the CLI with ctrl + c and open it manually.
+
+Link your existing Git repository to Heroku by adding Heroku as a remote repository:
+
+```
+heroku git:remote -a <project-name>
+```
+
+From now on you can push your code from the CLI with:
+
+```
+git push heroku master
+```
+
+Set the necessary Environment Variables. Select the Settings tab, and then select the Config Vars button. Enter the KEY - VALUE pairs for your config variables here (e.g. SECRET_KEY, IP, PORT etc.)
+
+In order to migrate all the models into Heroku PostgreSQL I run
+
+```
+heroku python3 manage.py makemigrations
+```
+
+and
+
+```
+heroku python3 manage.py migrate
+```
+
+To create a new superuser in the new PostgreSQL database I ran createsuperuser command;
+
+Finally, select the Open App button the top right of the screen to see your deployed application.
+
+### AWS
+
+To use AWS S3 to store staticfiles I set DISABLE_COLLECTSTATIC=1 by running the following command:
+
+```
+heroku config:set DISABLE_COLLECTSTATIC=1
+```
+
+## Credits
+
+### Code Used
+
+Readme content inspiration taken from several CI student projects. Followed CI tutorials.
+
+### Images Used
+
+- Pexels
+- Shein
+- Google Image Search
+- Pinterest
+
+### Acknowledgements
+
+### Disclaimer
+
+This is for educational purpouse only. If there is any issue with images, please email me at sabine.mica@gmail.com for them to be promptly removed.
