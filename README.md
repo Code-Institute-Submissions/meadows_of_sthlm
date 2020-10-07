@@ -10,6 +10,8 @@ Full Stack Frameworks with Django Milestone Project MS4
 
 This project is part of the 'Full Stack Frameworks with Django' module of the Code Institute Full Stack Software Development course.
 
+Name was created with a random business name generator. Sthlm is shorthand for Stockholm.
+
 To complete this module the task was to create an issue tracking application that allows users to submit their tickets.
 
 The site is built with Django framework, deployed live on Heroku and uses AWS S3 to host media and static files. Locally, it uses the built-in Django Db.sqlite3 database, whereas when deployed live it uses Heroku's Postgres database. Their is full authentication functionality on-site using Django's Allauth: admin superusers can add and edit items in the Antiquities and Latest Options apps, whereas normal users can register and login, gaining access to antiquity descriptions and their order history in the Checkout and Profile apps.
@@ -250,7 +252,7 @@ Finally, select the Open App button the top right of the screen to see your depl
 
 ### AWS
 
-To use AWS S3 to store staticfiles I set DISABLE_COLLECTSTATIC=1 by running the following command:
+To use AWS S3 to store staticfiles I set `DISABLE_COLLECTSTATIC=1` by running the following command:
 
 ```
 heroku config:set DISABLE_COLLECTSTATIC=1
