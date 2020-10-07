@@ -150,6 +150,17 @@ Devices and platforms used for testing:
 
 I tested the site in Developer Tools mainly in Chrome and Safari. Bugs and errors were tackled successfully in this way throughout the development process by using lots of print statements.
 
+Tested all functionality by clicking on all elements and buttons:
+
+- Any user can create their own account by using the registration form. User has to provide first and last name, username, email and password in order to register.
+- Login form enables user to login to their account. Whenever user wants to log out they can click 'Sign out' located in the navbar menu. When user is not authenticated nobody else can access their account unless they know username and password of that user.
+- User can add products with 'Add to cart'. User can then press "Checkout" button to fill out their data and finalise purchase.
+- User is able to filter out products by type and status by using the filter feature implemented on the all products page.
+- User is able to search throught the content of my application by using the search bar.
+- User can access the edit profile form by clicking 'Edit Profile' in the navbar or on their profile page.
+- If user forgets their password they can click 'Forgot your password' link available on the sign in page. Process is designed in a way to provide a clear instructions every step of the way.
+- Users can view their purchase history in their profile if they have registered.
+
 ## Bugs
 
 Most of the errors I encountered along the way were simply syntax mistakes.
